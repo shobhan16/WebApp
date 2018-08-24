@@ -3,7 +3,7 @@ package functionaltest;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.By;
-//import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 //import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,7 +23,7 @@ public class ftat {
 	//public String URL1 = "http://localhost:8080/AVNCommunication-1.0/avncreatepage.jsp";
 	 
 	 
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void logintest() {
 		driver = new HtmlUnitDriver();
 		//driver= new FirefoxDriver();
@@ -98,7 +98,7 @@ public class ftat {
 		driver.findElement(By.xpath("//h2[text()='Repair Ticket Page']")).isDisplayed();
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 1)
 	public void logouttest() {
 		driver.findElement(By.partialLinkText("Logout")).click();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
